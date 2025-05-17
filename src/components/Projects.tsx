@@ -39,7 +39,7 @@ const projects = [
     image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["Apache Spark", "Airflow", "PostgreSQL", "Docker"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/Customer-churn-analysis-using-PySpark",
     category: "data"
   },
   {
