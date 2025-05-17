@@ -19,7 +19,7 @@ const projects = [
     image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["BERT", "PyTorch", "Transformers", "Flask"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/SQL-And-Data-Visualisation-Agent",
     category: "ml"
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["OpenCV", "YOLO", "TensorFlow", "Python"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/Axion.AI",
     category: "vision"
   },
   {
