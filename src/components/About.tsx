@@ -63,11 +63,11 @@ const About = () => {
                 <p className="text-gray-600 dark:text-gray-400">Datasets Analyzed</p>
               </div>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm transform hover:scale-105 transition-transform duration-300">
-                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">10+</p>
-                <p className="text-gray-600 dark:text-gray-400">Research Papers</p>
+                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">1</p>
+                <p className="text-gray-600 dark:text-gray-400">Research Paper</p>
               </div>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm transform hover:scale-105 transition-transform duration-300">
-                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">5+</p>
+                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">10+</p>
                 <p className="text-gray-600 dark:text-gray-400">Competitions</p>
               </div>
             </div>
