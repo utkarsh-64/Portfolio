@@ -4,17 +4,17 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "Predictive Analytics Dashboard",
-    description: "A comprehensive analytics platform using machine learning for predictive insights and data visualization.",
+    title: "Data2Model - No code ML Model Training Platform",
+    description: "A comprehensive ml platform for training different machine learning models with just one click.",
     image: "https://images.pexels.com/photos/5473337/pexels-photo-5473337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["Python", "TensorFlow", "Streamlit", "Scikit-learn"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/Data2Model",
     category: "ml"
   },
   {
     id: 2,
-    title: "Natural Language Processing Tool",
+    title: "Vizquery - Data explanation model",
     description: "An NLP application for sentiment analysis and text classification using deep learning.",
     image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["BERT", "PyTorch", "Transformers", "Flask"],
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Computer Vision System",
+    title: "Axion Ai",
     description: "Real-time object detection and image classification system using deep learning.",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["OpenCV", "YOLO", "TensorFlow", "Python"],
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Data Pipeline Architecture",
+    title: "Custormer Churn Analysis using Pyspark",
     description: "Automated data processing pipeline for large-scale data analysis and ETL operations.",
     image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["Apache Spark", "Airflow", "PostgreSQL", "Docker"],
@@ -49,7 +49,7 @@ const projects = [
     image: "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["Python", "Librosa", "Scikit-learn", "TensorFlow"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/Indian-vs.-Carnatic-music-Classification",
     category: "ml"
   },
   {
@@ -59,14 +59,14 @@ const projects = [
     image: "https://images.pexels.com/photos/4386372/pexels-photo-4386372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["MySQL", "Python", "Streamlit"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/Loan-Management-System",
     category: "data"
   },
   {
     id: 7,
     title: "BDM Capstone - Coffee Shop Analysis",
     description: "Analyzed customer behavior and sales trends using analytics techniques and dashboards for insights.",
-    image: "https://images.pexels.com/photos/5857509/pexels-photo-5857509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*1Mu_zZxaOJV8MrmYj-g10Q.jpeg",
     technologies: ["Python", "MySQL", "Tableau", "Pandas"],
     link: "#",
     github: "#",
@@ -89,7 +89,7 @@ const projects = [
     image: "https://images.pexels.com/photos/7088989/pexels-photo-7088989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["Python", "Scikit-learn", "XGBoost", "Matplotlib"],
     link: "#",
-    github: "#",
+    github: "https://github.com/utkarsh-64/Kyphosis-Disease-Prediction",
     category: "ml"
   },
   {
@@ -101,6 +101,16 @@ const projects = [
     link: "#",
     github: "#",
     category: "ml"
+  },
+  {
+    id:11,
+    title:"Health Insurance amount prediction",
+    description: "A simple model to predict the health insuarnace claim amount.",
+    image: "https://media.vyaparify.com/vcards/blogs/71845/Health-insurance.png",
+    technologies: ["Python", "Streamlit", 'PowerBI', 'Kaggle'],
+    link: "#",
+    github: "https://github.com/utkarsh-64/Health-Insurance-Prediction-Model",
+    category: 'ml'
   }
 ];
 
