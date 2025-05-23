@@ -15,29 +15,29 @@ const projects = [
   {
     id: 2,
     title: "Vizquery - Data explanation model",
-    description: "An NLP application for sentiment analysis and text classification using deep learning.",
+    description: "An application for data understanding and visualization with zero coding.",
     image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["BERT", "PyTorch", "Transformers", "Flask"],
-    link: "#",
+    technologies: ["Python", "Flask", "React", "PostegreSQL", "MySQL", 'Langchain", "TensorFlow"],
+    link: "vizquery.vercel.app",
     github: "https://github.com/utkarsh-64/SQL-And-Data-Visualisation-Agent",
     category: "ml"
   },
   {
     id: 3,
     title: "Axion Ai",
-    description: "Real-time object detection and image classification system using deep learning.",
+    description: "An application to Summarize documents, schedule interviews and resume parsing",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["OpenCV", "YOLO", "TensorFlow", "Python"],
-    link: "#",
+    technologies: ["React", "PostgreSQL", "TensorFlow", "Python", "Flask", "Groq"],
+    link: "https://axion-ai-ten.vercel.app/",
     github: "https://github.com/utkarsh-64/Axion.AI",
-    category: "vision"
+    category: "ml"
   },
   {
     id: 4,
     title: "Custormer Churn Analysis using Pyspark",
     description: "Automated data processing pipeline for large-scale data analysis and ETL operations.",
     image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["Apache Spark", "Airflow", "PostgreSQL", "Docker"],
+    technologies: ["Apache Spark", "PostgreSQL", "Git"],
     link: "#",
     github: "https://github.com/utkarsh-64/Customer-churn-analysis-using-PySpark",
     category: "data"
