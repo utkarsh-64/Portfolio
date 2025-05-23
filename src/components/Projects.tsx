@@ -17,7 +17,7 @@ const projects = [
     title: "Vizquery - Data explanation model",
     description: "An application for data understanding and visualization with zero coding.",
     image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["Python", "Flask", "React", "PostegreSQL", "MySQL", 'Langchain", "TensorFlow"],
+    technologies: ["Python", "Flask", "React", "PostegreSQL", "MySQL", "Langchain", "TensorFlow"],
     link: "vizquery.vercel.app",
     github: "https://github.com/utkarsh-64/SQL-And-Data-Visualisation-Agent",
     category: "ml"
