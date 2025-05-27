@@ -1,0 +1,593 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 13% 5%;
+    --foreground: 180 100% 90%;
+    --card: 220 13% 8%;
+    --card-foreground: 180 100% 90%;
+    --popover: 220 13% 8%;
+    --popover-foreground: 180 100% 90%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 13% 5%;
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 220 13% 5%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 180 50% 70%;
+    --accent: 120 100% 50%;
+    --accent-foreground: 220 13% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 180 50% 20%;
+    --input: 180 50% 20%;
+    --ring: 180 100% 50%;
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 180 100% 25%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 300 100% 25%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 120 100% 25%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 180 100% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    background-image: linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-attachment: fixed;
+  }
+
+  .light body {
+    background-image: linear-gradient(rgba(0, 150, 150, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 150, 150, 0.1) 1px, transparent 1px);
+  }
+}
+
+@layer components {
+  .cyber-card {
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1), inset 0 0 10px rgba(0, 255, 255, 0.05);
+  }
+
+  .neon-border {
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), inset 0 0 5px rgba(0, 255, 255, 0.1);
+  }
+
+  .neon-text {
+    color: #00ffff;
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+
+  .neon-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    }
+    50% {
+      box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    }
+  }
+
+  .glass-morphism {
+    background: rgba(26, 26, 46, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+  }
+
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent 50%, rgba(0, 255, 255, 0.03) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hologram {
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1), rgba(0, 255, 0, 0.1));
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .terminal-cursor::after {
+    content: "█";
+    color: #00ff00;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .cyber-button {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    color: #00ffff;
+    transition: all 0.3s ease;
+  }
+
+  .cyber-button:hover {
+    border-color: #00ffff;
+    color: #0a0a0f;
+    background-color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+
+  .cyber-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .cyber-button:hover::before {
+    left: 100%;
+  }
+
+  /* Responsive utilities */
+  .responsive-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .responsive-text {
+    font-size: 0.875rem;
+  }
+
+  .responsive-heading {
+    font-size: 1.5rem;
+  }
+
+  .responsive-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .responsive-margin {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-grid {
+      gap: 1.5rem;
+    }
+    .responsive-text {
+      font-size: 1rem;
+    }
+    .responsive-heading {
+      font-size: 1.875rem;
+    }
+    .responsive-padding {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .responsive-margin {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .responsive-heading {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-grid {
+      gap: 2rem;
+    }
+    .responsive-text {
+      font-size: 1.125rem;
+    }
+    .responsive-heading {
+      font-size: 3rem;
+    }
+    .responsive-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .responsive-margin {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .responsive-heading {
+      font-size: 3.75rem;
+    }
+    .responsive-padding {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .responsive-margin {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+/* Light mode overrides - outside of @layer to avoid conflicts */
+.light .cyber-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.light .neon-border {
+  border: 1px solid #9ca3af;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.light .neon-text {
+  color: #2563eb;
+  text-shadow: none;
+}
+
+.light .neon-glow {
+  animation: none;
+}
+
+.light .glass-morphism {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light .scanlines::before {
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+}
+
+.light .hologram {
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1), rgba(34, 197, 94, 0.1));
+}
+
+.light .terminal-cursor::after {
+  color: #16a34a;
+}
+
+.light .cyber-button {
+  border-color: #60a5fa;
+  color: #2563eb;
+}
+
+.light .cyber-button:hover {
+  border-color: #2563eb;
+  color: #ffffff;
+  background-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.light .cyber-button::before {
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+}
+
+/* Text color overrides for light mode */
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
+  color: #111827;
+}
+
+.light p,
+.light span,
+.light div {
+  color: #374151;
+}
+
+.light .text-white {
+  color: #111827 !important;
+}
+
+.light .text-gray-300 {
+  color: #374151 !important;
+}
+
+.light .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.light .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.light .text-gray-600 {
+  color: #374151 !important;
+}
+
+.light .text-neon-cyan {
+  color: #2563eb !important;
+}
+
+.light .text-neon-magenta {
+  color: #9333ea !important;
+}
+
+.light .text-neon-green {
+  color: #16a34a !important;
+}
+
+.light .text-neon-blue {
+  color: #3b82f6 !important;
+}
+
+.light .text-neon-yellow {
+  color: #ca8a04 !important;
+}
+
+/* Background color overrides for light mode */
+.light .bg-cyber-dark {
+  background-color: #f9fafb !important;
+}
+
+.light .bg-cyber-darker {
+  background-color: #f3f4f6 !important;
+}
+
+.light .bg-cyber-light {
+  background-color: #ffffff !important;
+}
+
+/* Enhanced colored badge/box text visibility fixes for both modes */
+
+/* Dark mode colored badges */
+.bg-neon-cyan\/10,
+.bg-neon-cyan\/20,
+[class*="bg-neon-cyan"] {
+  background-color: rgba(0, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.bg-neon-magenta\/10,
+.bg-neon-magenta\/20,
+[class*="bg-neon-magenta"] {
+  background-color: rgba(255, 0, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.bg-neon-blue\/10,
+.bg-neon-blue\/20,
+[class*="bg-neon-blue"] {
+  background-color: rgba(0, 128, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.bg-neon-purple\/10,
+.bg-neon-purple\/20,
+[class*="bg-neon-purple"] {
+  background-color: rgba(128, 0, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.bg-neon-green\/10,
+.bg-neon-green\/20,
+[class*="bg-neon-green"] {
+  background-color: rgba(0, 255, 0, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.bg-neon-yellow\/10,
+.bg-neon-yellow\/20,
+[class*="bg-neon-yellow"] {
+  background-color: rgba(255, 255, 0, 0.2) !important;
+  color: #000000 !important;
+}
+
+/* Light mode colored badge fixes with maximum contrast */
+.light .bg-neon-cyan\/10,
+.light .bg-neon-cyan\/20,
+.light [class*="bg-neon-cyan"],
+.light .bg-neon-cyan\/10 span,
+.light .bg-neon-cyan\/20 span,
+.light [class*="bg-neon-cyan"] span {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  border: 1px solid #1d4ed8 !important;
+}
+
+.light .bg-neon-magenta\/10,
+.light .bg-neon-magenta\/20,
+.light [class*="bg-neon-magenta"],
+.light .bg-neon-magenta\/10 span,
+.light .bg-neon-magenta\/20 span,
+.light [class*="bg-neon-magenta"] span {
+  background-color: #7c2d12 !important;
+  color: #ffffff !important;
+  border: 1px solid #92400e !important;
+}
+
+.light .bg-neon-blue\/10,
+.light .bg-neon-blue\/20,
+.light [class*="bg-neon-blue"],
+.light .bg-neon-blue\/10 span,
+.light .bg-neon-blue\/20 span,
+.light [class*="bg-neon-blue"] span {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  border: 1px solid #1d4ed8 !important;
+}
+
+.light .bg-neon-purple\/10,
+.light .bg-neon-purple\/20,
+.light [class*="bg-neon-purple"],
+.light .bg-neon-purple\/10 span,
+.light .bg-neon-purple\/20 span,
+.light [class*="bg-neon-purple"] span {
+  background-color: #6b21a8 !important;
+  color: #ffffff !important;
+  border: 1px solid #7c3aed !important;
+}
+
+.light .bg-neon-green\/10,
+.light .bg-neon-green\/20,
+.light [class*="bg-neon-green"],
+.light .bg-neon-green\/10 span,
+.light .bg-neon-green\/20 span,
+.light [class*="bg-neon-green"] span {
+  background-color: #14532d !important;
+  color: #ffffff !important;
+  border: 1px solid #166534 !important;
+}
+
+.light .bg-neon-yellow\/10,
+.light .bg-neon-yellow\/20,
+.light [class*="bg-neon-yellow"],
+.light .bg-neon-yellow\/10 span,
+.light .bg-neon-yellow\/20 span,
+.light [class*="bg-neon-yellow"] span {
+  background-color: #92400e !important;
+  color: #ffffff !important;
+  border: 1px solid #a16207 !important;
+}
+
+/* Specific Badge component overrides for light mode */
+.light [data-slot="base"][class*="bg-"],
+.light .inline-flex[class*="bg-"],
+.light button[class*="bg-"],
+.light span[class*="bg-"] {
+  color: #ffffff !important;
+}
+
+/* Ultra-specific overrides for stubborn elements */
+.light [class*="bg-neon"] * {
+  color: #ffffff !important;
+}
+
+.light [class*="bg-neon-yellow"] * {
+  color: #ffffff !important;
+}
+
+/* Force text color on any nested elements */
+.light .bg-neon-cyan\/10 *,
+.light .bg-neon-cyan\/20 *,
+.light [class*="bg-neon-cyan"] *,
+.light .bg-neon-magenta\/10 *,
+.light .bg-neon-magenta\/20 *,
+.light [class*="bg-neon-magenta"] *,
+.light .bg-neon-blue\/10 *,
+.light .bg-neon-blue\/20 *,
+.light [class*="bg-neon-blue"] *,
+.light .bg-neon-purple\/10 *,
+.light .bg-neon-purple\/20 *,
+.light [class*="bg-neon-purple"] *,
+.light .bg-neon-green\/10 *,
+.light .bg-neon-green\/20 *,
+.light [class*="bg-neon-green"] *,
+.light .bg-neon-yellow\/10 *,
+.light .bg-neon-yellow\/20 *,
+.light [class*="bg-neon-yellow"] * {
+  color: #ffffff !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 26, 46, 0.5);
+}
+
+.light ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.8);
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+.light ::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid rgba(0, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.light *:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
