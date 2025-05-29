@@ -68,7 +68,7 @@ export default function Header() {
       element.scrollIntoView({ behavior: "smooth" })
       setTimeout(() => {
         setIsMenuOpen(false)
-      }, 400)
+      }, 800)
     } else {
       setIsMenuOpen(false)
     }
