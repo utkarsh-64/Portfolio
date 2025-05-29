@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
-import { Moon, Sun, Menu, X, Zap, Ghost } from "lucide-react"
+import { Lightbulb, Ghost, Bug, Rocket, Moon, Sun, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
@@ -11,9 +11,9 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Writings", href: "#research"},
-  { name: "Achievements", href: "#achievements"},
-  { name: "Experience", href: "#leadership"},
+  { name: "Writings", href: "#research" },
+  { name: "Achievements", href: "#achievements" },
+  { name: "Experience", href: "#leadership" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -23,9 +23,21 @@ export default function Header() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
+  // Rotating icon logic
+  const rotatingIcons = [Lightbulb, Ghost, Bug, Rocket]
+  const [iconIndex, setIconIndex] = useState(0)
+
   useEffect(() => {
     setMounted(true)
+
+    const interval = setInterval(() => {
+      setIconIndex((prev) => (prev + 1) % rotatingIcons.length)
+    }, 2000) // switch every 2 seconds
+
+    return () => clearInterval(interval)
   }, [])
+
+  const FunnyIcon = rotatingIcons[iconIndex]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,9 +70,7 @@ export default function Header() {
     setIsMenuOpen(false)
   }
 
-  if (!mounted) {
-    return null
-  }
+  if (!mounted) return null
 
   return (
     <motion.header
@@ -71,7 +81,7 @@ export default function Header() {
       <div className="scanlines" />
       <nav className="container mx-auto responsive-padding py-3 sm:py-4 flex items-center justify-between">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-2">
-          <Ghost className="w-6 h-6 sm:w-8 sm:h-8 text-neon-cyan animate-pulse" />
+          <FunnyIcon className="w-6 h-6 sm:w-8 sm:h-8 text-neon-cyan animate-pulse transition-all duration-500" />
           <span className="text-xl sm:text-2xl font-cyber font-bold neon-text">URL</span>
         </motion.div>
 
