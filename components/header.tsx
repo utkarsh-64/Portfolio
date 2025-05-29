@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
-import { Moon, Sun, Menu, X, Zap } from "lucide-react"
+import { Moon, Sun, Menu, X, Zap, Lightbulb, Ghost, Bug, Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
