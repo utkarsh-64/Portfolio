@@ -66,10 +66,14 @@ export default function Header() {
     const element = document.getElementById(href.substring(1))
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
+      setTimeout(() => {
+        setIsMenuOpen(false)
+      }, 400)
+    } else {
+      setIsMenuOpen(false)
     }
-    setIsMenuOpen(false)
   }
-
+  
   if (!mounted) return null
 
   return (
