@@ -72,7 +72,7 @@ export default function Header() {
       <nav className="container mx-auto responsive-padding py-3 sm:py-4 flex items-center justify-between">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-2">
           <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-neon-cyan animate-pulse" />
-          <span className="text-xl sm:text-2xl font-cyber font-bold neon-text">UL</span>
+          <span className="text-xl sm:text-2xl font-cyber font-bold neon-text">URL</span>
         </motion.div>
 
         {/* Desktop Navigation */}
