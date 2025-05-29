@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
-import { Moon, Sun, Menu, X, Zap, Lightbulb, Ghost, Bug, Rocket } from "lucide-react"
+import { Moon, Sun, Menu, X, Zap, Ghost } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
@@ -58,20 +58,6 @@ export default function Header() {
     setIsMenuOpen(false)
   }
 
-  const FunnyIconSwitcher = () => {
-  const icons = [Lightbulb, Ghost, Bug, Rocket];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % icons.length);
-    }, 2000); // Change icon every 2 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const Icon = icons[index];
-
   if (!mounted) {
     return null
   }
@@ -85,7 +71,7 @@ export default function Header() {
       <div className="scanlines" />
       <nav className="container mx-auto responsive-padding py-3 sm:py-4 flex items-center justify-between">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-2">
-          <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-neon-cyan animate-pulse" />
+          <Ghost className="w-6 h-6 sm:w-8 sm:h-8 text-neon-cyan animate-pulse" />
           <span className="text-xl sm:text-2xl font-cyber font-bold neon-text">URL</span>
         </motion.div>
 
@@ -161,5 +147,4 @@ export default function Header() {
       </motion.div>
     </motion.header>
   )
-}
 }
