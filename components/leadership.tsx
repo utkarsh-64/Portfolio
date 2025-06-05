@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button"
 
 const experiences = [
   {
-    title: "Student Intern",
-    company: "Microsoft & SAP - AICTE Internship",
+    role: "Student Intern",
+    organization: "Microsoft & SAP - AICTE Internship",
     location: "Remote",
     duration: "Jan 2025 - Feb 2025",
     description: [
@@ -22,22 +22,22 @@ const experiences = [
     responsibilities:["Developig an ML based solution for the problem statement"],
     technologies: ["AI/ML", "Python", "streamlit", "Data Science", "Huggingface"],
     current: true,
-  },
-  {
-    role: "Documentation Team Head",
-    organization: "Symbitech Techfest",
-    duration: "Jan 2025 - Feb 2025",
-    type: "",
-    description:
-      "Leading the documentation team for one of the premier technical festivals, overseeing content creation and team coordination.",
-    responsibilities: [
-      "Managing documentation team and workflow",
-      "Coordinating with multiple technical teams",
-      "Ensuring quality and consistency in documentation",
-      "Leading content strategy and implementation",
-    ],
-    current: true,
-  },
+  // },
+  // {
+  //   role: "Documentation Team Head",
+  //   organization: "Symbitech Techfest",
+  //   duration: "Jan 2025 - Feb 2025",
+  //   type: "",
+  //   description:
+  //     "Leading the documentation team for one of the premier technical festivals, overseeing content creation and team coordination.",
+  //   responsibilities: [
+  //     "Managing documentation team and workflow",
+  //     "Coordinating with multiple technical teams",
+  //     "Ensuring quality and consistency in documentation",
+  //     "Leading content strategy and implementation",
+  //   ],
+  //   current: true,
+  // },
   {
     role: "Technical Community Member",
     organization: "Google Developer Student Club",
@@ -67,21 +67,21 @@ const experiences = [
     ],
     current: true,
   },
-  {
-    role: "Documentation and Media Team Member",
-    organization: "Symbiosis Music Society",
-    duration: "July 2024 - Present",
-    type: "",
-    description:
-      "Managing documentation and media content for cultural events, concerts, and music-related activities.",
-    responsibilities: [
-      "Creating and managing media content",
-      "Documenting cultural events and performances",
-      "Coordinating with artists and performers",
-      "Managing social media presence",
-    ],
-    current: true,
-  },
+  // {
+  //   role: "Documentation and Media Team Member",
+  //   organization: "Symbiosis Music Society",
+  //   duration: "July 2024 - Present",
+  //   type: "",
+  //   description:
+  //     "Managing documentation and media content for cultural events, concerts, and music-related activities.",
+  //   responsibilities: [
+  //     "Creating and managing media content",
+  //     "Documenting cultural events and performances",
+  //     "Coordinating with artists and performers",
+  //     "Managing social media presence",
+  //   ],
+  //   current: true,
+  // },
 ]
 
 export default function Leadership() {
