@@ -22,7 +22,7 @@ const experiences = [
     responsibilities:["Developig an ML based solution for the problem statement"],
     technologies: ["AI/ML", "Python", "streamlit", "Data Science", "Huggingface"],
     current: true,
-  // },
+  },
   // {
   //   role: "Documentation Team Head",
   //   organization: "Symbitech Techfest",
